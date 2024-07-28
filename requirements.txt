@@ -1,0 +1,5 @@
+apscheduler==3.10.1
+cohere
+python-telegram-bot==20.2
+requests==2.28.2
+asyncio==3.4.3
