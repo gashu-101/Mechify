@@ -36,7 +36,7 @@ GROUP_TOPICS = {
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Sends a welcome message and shows available options."""
     welcome_message = (
-        "🎓Welcome to  AAIT Mechanical Engineering Study Bot (Mechify)!🎓\n\n"
+        "🎓Welcome to AAIT Mechanical Engineering Study Bot (Mechify)!🎓\n\n"
         "Choose an option below to get started:"
     )
 
@@ -208,6 +208,14 @@ def get_youtube_video_url(topic):
         return "Failed to fetch video. 🚫"
 
 def main() -> None:
+    # Ensure an event loop is available
+    try:
+        loop = asyncio.get_event_loop()
+    except RuntimeError as e:
+        if "There is no current event loop in thread" in str(e):
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+
     application = Application.builder().token(BOT_TOKEN).build()
     application.add_handler(CommandHandler('start', start))
     application.add_handler(CallbackQueryHandler(button))
