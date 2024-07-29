@@ -13,7 +13,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot and API details
-BOT_TOKEN = "7076733440:AAGVxBbBMDelIQZUX9kgbqRpah-XVFT89k4"
+BOT_TOKEN = "7076733440:AAEkh3e-s10izeS5kkcBQZ4R_y2Gc4ODWLM"
 YOUTUBE_API_KEY = "AIzaSyBEahpYqLrKw8Yq46WmOqcnSyqmhsq4EUk"
 API_ID = '29149446'
 API_HASH = 'd4a95c48244165f660d8b4341f0c06b5'
