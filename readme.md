@@ -21,7 +21,7 @@ Welcome to **MechIfy**! This bot is designed to assist Mechanical Engineering st
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/mechify-bot.git
+   git clone https://github.com/gashu-101/mechify-bot.git
    cd mechify-bot
    ```
 
