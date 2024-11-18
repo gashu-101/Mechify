@@ -134,6 +134,19 @@ We’re working hard to bring you even more exciting features soon! Stay tuned a
     elif query.data == 'start':
         await start(update, context)
 
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Provide a detailed list of bot commands."""
+    help_text = """
+🤖 *MechIfy Bot Commands:*
+
+/start - Start the bot and get a welcome message
+/help - Get detailed help on all available commands
+/quote - Get a random motivational quote
+/about - Learn more about the MechIfy bot
+    """
+    await update.message.reply_text(help_text, parse_mode='Markdown')
+
+
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_message = update.message.text
 
